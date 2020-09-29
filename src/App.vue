@@ -1,32 +1,48 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<div id="app">
+  
+    <router-view></router-view>
+    <tab-bar>
+
+        <tab-bar-item path='/home' activeColor='blue'>
+            <img src="@/assets/img/tabbar/a3.png" alt slot="item-icon" />
+            <img src="@/assets/img/tabbar/b3.jpg" alt slot="item-icon-active" />
+            <div slot="item-text">首页</div>
+        </tab-bar-item>
+        <tab-bar-item path='/category' activeColor='blue'>
+            <img src="./assets/img/tabbar/a4.png" alt slot="item-icon" />
+            <img src="./assets/img/tabbar/b4.jpg" alt slot="item-icon-active" />
+            <div slot="item-text">分类</div>
+        </tab-bar-item>
+        <tab-bar-item path='/cart' activeColor='blue'>
+            <img src="./assets/img/tabbar/a5.png" alt slot="item-icon" />
+            <img src="./assets/img/tabbar/b5.jpg" alt slot="item-icon-active" />
+            <div slot="item-text">购物车</div>
+        </tab-bar-item>
+        <tab-bar-item path='/profile' activeColor='blue'>
+            <img src="./assets/img/tabbar/a6.png" alt slot="item-icon" />
+            <img src="./assets/img/tabbar/b6.jpg" alt slot="item-icon-active" />
+            <div slot="item-text">我的</div>
+        </tab-bar-item>
+    </tab-bar>
+</div>
 </template>
 
+<script>
+import TabBar from "./components/common/tabbar/TabBar";
+import TabBarItem from "./components/common/tabbar/TabBarItem";
+import HelloVuex from "./components/common/tabbar/HelloVuex"
+
+export default {
+    name: "App",
+    components: {
+        TabBar,
+        TabBarItem,
+        HelloVuex
+    },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+@import "assets/css/base.css";
 </style>
