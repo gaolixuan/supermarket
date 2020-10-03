@@ -45,11 +45,12 @@ methods: {
 
 <style>
 .recommends{
-    
+  
+    width: 100%;
     display:flex;
     text-align: center;
     font-size: 12px;
-    padding: 15px 0 30px;
+    padding: 44px 0 30px;
     border-bottom: 8px solid #eee;
 }
 .recommends-item{

@@ -21,13 +21,14 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .nav-bar{
     display:flex;
     line-height: 44px;
     height: 44px;
 text-align: center;
 box-shadow: 0 1px 1px rgba(100,100,100,.1);
+
 
 }
 .left,.right{
@@ -39,7 +40,5 @@ box-shadow: 0 1px 1px rgba(100,100,100,.1);
     flex: 1;
  
 }
-h2{
-    color:red
-}
+
 </style>
